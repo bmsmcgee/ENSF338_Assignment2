@@ -1,13 +1,18 @@
 import sys
+import os
+from os import path
 import json
 import timeit
 import matplotlib.pyplot as plt
 
 sys.setrecursionlimit(20000)
 
+__location__ = os.path.realpath(path.join(
+    os.getcwd(), path.dirname(__file__)))
+
 
 def main():
-    with open('/Users/eadan/VSCode/2023 Winter/ENSF 338/Assignment 2/data.json', 'r') as file:
+    with open(os.path.join(__location__, 'data.json'), 'r') as file:
         data = json.load(file)
 
     times = []
