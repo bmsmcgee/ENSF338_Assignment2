@@ -12,18 +12,21 @@ __location__ = os.path.realpath(path.join(
 
 
 def main():
-    with open(os.path.join(__location__, 'data.json'), 'r') as file:
-        data = json.load(file)
+    with open(os.path.join(__location__, 'data.json'), 'r') as infile:
+        data = json.load(infile)
 
     times = []
     input_sizes = []
     num_arrays = len(data) - 1
     for i in range(num_arrays):
         high = len(data[i]) - 1
-        time = timeit.timeit(lambda: func1(data[i], 0, high), number=10)
-        print(f'Elapsed time: {time} seconds')
-        input_sizes.append(len(data[i]))
-        times.append(time)
+    with open(os.path.join(__location__, 'new_data.json') 'w') as outfile:
+        outfile.write(func1(data[i], 0, high))
+
+        # time = timeit.timeit(lambda: func1(data[i], 0, high), number=10)
+        # print(f'Elapsed time: {time} seconds')
+        # input_sizes.append(len(data[i]))
+        # times.append(time)
 
     plt.plot(input_sizes, times)
     plt.show()
@@ -38,6 +41,8 @@ def func1(arr, low, high):
         else:
             func1(arr, pi + 1, high)
             high = pi - 1
+
+    return arr
 
 
 def func2(array, start, end):
