@@ -10,4 +10,4 @@ As this algorithm is a implemenation of the quick sort we know that the average 
 
 2.
 
-3.  The results from timing the algorithms yielded the expected values described by the complexity analysis. When plotted we were able to determine that the graph was characteristic of exponential growth, specifically that of a 2nd order growth equation.
+3. The results from timing the algorithms yielded the expected values described by the complexity analysis. When plotted we were able to determine that the graph was characteristic of exponential growth, specifically that of a 2nd order growth equation.
