@@ -12,7 +12,7 @@ __location__ = os.path.realpath(path.join(
 
 
 def main():
-    with open(os.path.join(__location__, 'data.json'), 'r') as file:
+    with open(os.path.join(__location__, 'ex2.5.json'), 'r') as file:
         data = json.load(file)
 
     times = []
@@ -26,6 +26,9 @@ def main():
         times.append(time)
 
     plt.plot(input_sizes, times)
+    plt.title('Time taken for Quick Sort')
+    plt.xlabel('Input Size')
+    plt.ylabel('Time Elapsed (s)')
     plt.show()
 
 

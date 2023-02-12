@@ -39,8 +39,6 @@ def func1(arr, low, high):
             func1(arr, pi + 1, high)
             high = pi - 1
 
-    return arr
-
 
 def func2(array, start, end):
     p = array[start]
