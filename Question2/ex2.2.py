@@ -20,7 +20,7 @@ def main():
     num_arrays = len(data) - 1
     for i in range(num_arrays):
         high = len(data[i]) - 1
-        time = timeit.timeit(lambda: func1(data[i], 0, high), number=10)
+        time = timeit.timeit(lambda: func1(data[i], 0, high), number=1)
         print(f'Elapsed time: {time} seconds')
         input_sizes.append(len(data[i]))
         times.append(time)
